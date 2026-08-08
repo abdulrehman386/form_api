@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Customer Business Questionnaire</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen py-10 px-4">
+
+  <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12">
+
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-6">
+      <div class="flex items-center gap-3">
+        <svg width="48" height="48" viewBox="0 0 100 100" class="shrink-0">
+          <polygon points="50,3 90,25 90,75 50,97 10,75 10,25" fill="#2563eb"/>
+          <polygon points="50,18 76,32 76,68 50,82 24,68 24,32" fill="white"/>
+        </svg>
+        <div class="leading-tight">
+          <div class="text-2xl font-extrabold tracking-wide">
+            YOUR<span class="text-blue-600">LOGO</span>
+          </div>
+          <div class="text-xs tracking-[0.3em] text-slate-400">TAGLINE HERE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-slate-900 mb-2">
+      Customer Business Questionnaire
+    </h1>
+    <p class="text-center text-slate-500 mb-10">
+      Please complete the information below to help us understand your business.
+    </p>
+
+    <form id="businessForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- 1. Business Information -->
+      <section class="border border-slate-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">1</span>
+          <h2 class="font-bold text-slate-800">Business Information</h2>
+        </div>
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
+        <input id="businessName" type="text" placeholder="Enter your business name"
+          class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Website URL</label>
+        <input     id="website"
+ type="text" placeholder="https://www.yourwebsite.com"
+          class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Social Media Links</label>
+        <textarea id="socialMedia" rows="2" placeholder="Facebook, Instagram, LinkedIn, Twitter, etc."
+          class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"></textarea>
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Google Business Profile (GMB) Link</label>
+        <input 
+    id="gmbLink" type="text" placeholder="https://g.co/kgs/yourbusiness"
+          class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Booking System (if any)</label>
+        <input  id="bookingSystem" type="text" placeholder="e.g., Calendly, Booksy, Square, etc."
+          class="w-full px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </section>
+
+      <!-- Right column -->
+      <div class="flex flex-col gap-6">
+
+        <!-- 2. Payment Information -->
+        <section class="border border-slate-200 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-5">
+            <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">2</span>
+            <h2 class="font-bold text-slate-800">Payment Information</h2>
+          </div>
+          <p class="text-sm font-medium text-slate-700 mb-3">How do customers pay?</p>
+          <div class="flex flex-wrap gap-6">
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="online"  type="radio" name="payment" class="accent-blue-600 w-4 h-4"> Online
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="on-site" type="radio" name="payment" class="accent-blue-600 w-4 h-4"> On-site
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="both" type="radio" name="payment" class="accent-blue-600 w-4 h-4"> Both
+            </label>
+          </div>
+        </section>
+
+        <!-- 3. Business Details -->
+        <section class="border border-slate-200 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-5">
+            <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">3</span>
+            <h2 class="font-bold text-slate-800">Business Details</h2>
+          </div>
+
+          <label class="block text-sm font-medium text-slate-700 mb-1">Best-Selling Service/Product</label>
+          <textarea id="best-selling" rows="2" placeholder="Describe your best-selling service or product"
+            class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"></textarea>
+
+          <label class="block text-sm font-medium text-slate-700 mb-1">Average Response Time to Customer Inquiries</label>
+          <input id="average" type="text" placeholder="e.g., Within 2 hours"
+            class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+          <label class="block text-sm font-medium text-slate-700 mb-1">Language(s) Spoken</label>
+          <input id="language" type="text" placeholder="e.g., English, Spanish, French"
+            class="w-full px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </section>
+      </div>
+
+      <!-- 4. Brand Identity -->
+      <section class="border border-slate-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">4</span>
+          <h2 class="font-bold text-slate-800">Brand Identity</h2>
+        </div>
+        <p class="text-sm font-medium text-slate-700 mb-3">Do you have a Brand Manual?</p>
+        <div class="flex gap-6 mb-4">
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="yes" type="radio" name="brandManual" value="yes" class="accent-blue-600 w-4 h-4"> Yes (Please attach)
+          </label>
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="no" type="radio" name="brandManual" value="no" class="accent-blue-600 w-4 h-4"> No
+          </label>
+        </div>
+
+        <label id="brandUploadBox" class="hidden flex-col items-center justify-center border-2 border-dashed border-slate-300 rounded-xl py-10 text-center cursor-pointer hover:bg-slate-50 transition">
+          <input  type="file" id="brandUploadInput" class="hidden" disabled />
+          <svg class="w-8 h-8 text-blue-500 mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5 5 5M12 5v12"/>
+          </svg>
+          <span class="text-sm text-slate-600">Click to upload or drag and drop</span>
+          <span class="text-xs text-slate-400 mt-1">PDF, DOC, DOCX, or ZIP (Max. 10MB)</span>
+        </label>
+      </section>
+
+      <!-- 5. Target Audience -->
+      <section class="border border-slate-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">5</span>
+          <h2 class="font-bold text-slate-800">Target Audience</h2>
+        </div>
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Describe your target audience in one line</label>
+        <input id="audience" type="text" placeholder="e.g., Young professionals in urban areas"
+          class="w-full mb-5 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <p class="text-sm font-medium text-slate-700 mb-3">Audience:</p>
+        <div class="flex flex-wrap gap-6">
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="local" type="radio" name="audience" class="accent-blue-600 w-4 h-4"> Local
+          </label>
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="international" type="radio" name="audience" class="accent-blue-600 w-4 h-4"> International
+          </label>
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="both" type="radio" name="audience" class="accent-blue-600 w-4 h-4"> Both
+          </label>
+        </div>
+      </section>
+
+      <!-- 6. Competitors -->
+      <section class="border border-slate-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">6</span>
+          <h2 class="font-bold text-slate-800">Competitors</h2>
+        </div>
+        <p class="text-sm font-medium text-slate-700 mb-3">Top 3 Competitors</p>
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Competitor 1</label>
+        <input id="comiter1" type="text" placeholder="Enter competitor name"
+          class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Competitor 2</label>
+        <input id="compiter2" type="text" placeholder="Enter competitor name"
+          class="w-full mb-4 px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <label class="block text-sm font-medium text-slate-700 mb-1">Competitor 3</label>
+        <input id="compiter3" type="text" placeholder="Enter competitor name"
+          class="w-full px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </section>
+
+      <!-- 7. Content Marketing -->
+      <section class="border border-slate-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">7</span>
+          <h2 class="font-bold text-slate-800">Content Marketing</h2>
+        </div>
+
+        <p class="text-sm font-medium text-slate-700 mb-3">Do you create content regularly?</p>
+        <div class="flex gap-6 mb-5">
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="yes" type="radio" name="content" value="yes" class="accent-blue-600 w-4 h-4"> Yes
+          </label>
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input id="no" type="radio" name="content" value="no" class="accent-blue-600 w-4 h-4"> No
+          </label>
+        </div>
+
+        <div id="contentPublishBox" class="hidden">
+          <p class="text-sm text-slate-700 mb-3">If Yes, where do you publish content? <span class="text-slate-400">(Select all that apply)</span></p>
+          <div class="flex flex-col gap-2">
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="facebook" type="checkbox" class="accent-blue-600 w-4 h-4"> Facebook
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="instagram" type="checkbox" class="accent-blue-600 w-4 h-4"> Instagram
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="linkedin" type="checkbox" class="accent-blue-600 w-4 h-4"> LinkedIn
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="tiktok" type="checkbox" class="accent-blue-600 w-4 h-4"> TikTok
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="youtube"  type="checkbox" class="accent-blue-600 w-4 h-4"> YouTube
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-700">
+              <input id="otherPlatformCheckbox" type="checkbox" id="otherPlatformCheckbox" class="accent-blue-600 w-4 h-4"> Other
+              <input  type="text"  id="otherPlatformInput" class="hidden flex-1 border-b border-slate-300 focus:outline-none text-sm px-1" placeholder="Specify other platform..." />
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Additional Information -->
+      <section class="border border-slate-200 rounded-xl p-6 md:col-span-2">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-sm font-bold rounded">8</span>
+          <h2 class="font-bold text-slate-800">Additional Information</h2>
+        </div>
+        <label class="block text-sm font-medium text-slate-700 mb-1">Anything else we should know about your business?</label>
+        <textarea id="about-business" rows="3" placeholder="Share any additional details, goals, challenges, or important information..."
+          class="w-full px-4 py-2.5 border border-slate-300 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"></textarea>
+      </section>
+
+      <!-- Submit -->
+      <div class="md:col-span-2 flex justify-center mt-2">
+        <button type="submit"
+          class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+          </svg>
+          Submit Questionnaire
+        </button>
+      </div>
+
+    </form>
+
+
+
+    
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
